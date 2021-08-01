@@ -6,20 +6,12 @@ local ThreadClient = TriggerClientEvent
 local Client [=[ 
 
 
---/ Przykładowy KOD: (Blokowanie ammo powyżej 100)
+--/ Przykładowy KOD:
 
-CreateThread(function()
-	while true do 
-		Wait(15000)
-		local ped = Citizen.InvokeNative(0x43A66C31C68491C0, -1)
-		local car = GetVehiclePedIsIn(ped, false)
-		if car then 
-			local ammo = GetAmmoInPedWeapon(ped, GetSelectedPedWeapon(ped))
-			if ammo > 100 then
-				-- Wykryto respienie ammo ;p
-			end
-		end
-	end
+
+AddEventHandler('onClientResourceStop', function(resourceName)
+	--/Próba zatrzymania skryptu
+	--/Trigger Ban/Logi
 end)
 
 ]=]
